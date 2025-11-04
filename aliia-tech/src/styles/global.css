@@ -1,24 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+    /* src/styles/global.css */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    }
 
-body {
-  background-color: #f8f9fa;
-  color: #1a1a1a;
-}
+    /* * ¡AQUÍ ESTÁ EL CAMBIO!
+    * Cambiamos el fondo a un color oscuro (slate-900)
+    * y el color de texto base a un gris claro (slate-300).
+    */
+    body {
+    background-color: #0f172a; /* <-- FONDO OSCURO */
+    color: #cbd5e1;           /* <-- TEXTO CLARO */
+    }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
+    a {
+    text-decoration: none;
+    color: inherit;
+    }
 
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 40px 20px;
-}
+    /* * Dejamos tu clase 'container' original, pero ya no la 
+    * usaremos mucho, porque Tailwind tiene la suya.
+    */
+    .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+    }
