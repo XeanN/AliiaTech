@@ -1,109 +1,161 @@
-// src/pages/Home.jsx
 import { Link } from "react-router-dom";
-import ServiceCard from "../components/ServiceCard.jsx";
 
-// --- Iconos SVG (los definimos aquí para usarlos fácil) ---
-const WebIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-blue-600">
-    <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5 0-3 16.5" />
+// --- Iconos para los Pilares (Los mismos que usamos en la página de Servicios) ---
+const PilarIconWeb = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10 text-accent-start">
+    <path strokeLinecap="round" strokeLinejoin="round" d="m6.115 5.18.319 1.913A6 6 0 0 0 8.11 10.36L9.75 12l-.387.775c-.217.433-.132.956.21 1.299l1.348 1.348c.21.21.329.497.329.795v1.089c0 .426.24.815.622 1.006l.153.076c.433.217.956.132 1.299-.21l.775-.387 1.64 1.64A6 6 0 0 0 18.384 21H19.5a1.5 1.5 0 0 0 1.5-1.5v-1.5c0-.433-.132-.845-.384-1.187l-1.64-1.64.775-.387c.342-.17.433-.56.21-1.299l-1.348-1.348c-.21-.21-.497-.329-.795-.329v-1.089c0-.426-.24-.815-.622-1.006l-.153-.076c-.433-.217-.956-.132-1.299.21l-.387.775-1.64-1.64A6 6 0 0 0 4.616 3H3.5a1.5 1.5 0 0 0-1.5 1.5v1.5c0 .433.132.845.384 1.187l1.64 1.64Z" />
   </svg>
 );
-const SecurityIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-blue-600">
-    <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 0 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
+const PilarIconSistemas = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10 text-accent-start">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 0 1-.375 1.518c-.207.375-.465.722-.777 1.018a3.75 3.75 0 0 1-5.696 0 3.75 3.75 0 0 1 0-5.696c.375-.207.722-.465 1.018-.777 1.518-.375 1.007-.375 1.007-.375h1.5M13.5 1.5v1.007a3 3 0 0 0 .375 1.518c.207.375.465.722.777 1.018a3.75 3.75 0 0 0 5.696 0 3.75 3.75 0 0 0 0-5.696c-.375-.207-.722-.465-1.018-.777A3 3 0 0 0 19.5 1.5h-1.5m-6 6v1.007a3 3 0 0 1-.375 1.518c-.207.375-.465.722-.777 1.018a3.75 3.75 0 0 1-5.696 0 3.75 3.75 0 0 1 0-5.696c.375-.207.722-.465 1.018-.777A3 3 0 0 1 7.5 7.5h1.5m6 6v1.007a3 3 0 0 0 .375 1.518c.207.375.465.722.777 1.018a3.75 3.75 0 0 0 5.696 0 3.75 3.75 0 0 0 0-5.696c-.375-.207-.722-.465-1.018-.777A3 3 0 0 0 19.5 13.5h-1.5" />
   </svg>
 );
-const AiIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-blue-600">
-    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M8.25 21v-1.5M4.5 15.75H3m18 0h-1.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25a.75.75 0 0 1 .75.75V18a.75.75 0 0 1-1.5 0v-1.5a.75.75 0 0 1 .75-.75Zm0-3.75a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-1.5 0V12a.75.75 0 0 1 .75-.75Zm0-3.75a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-1.5 0V8.25a.75.75 0 0 1 .75-.75Z" />
+const PilarIconMarketing = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10 text-accent-start">
+     <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" />
+     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" />
   </svg>
+);
+const PilarIconIndustria = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10 text-accent-start">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 21v-4.5m0 4.5h-2.25m2.25 0h2.25m0 0v-4.5m0 4.5h2.25M12 21v-4.5m0 4.5h-2.25m2.25 0h2.25m0 0v-4.5m0 4.5h2.25M20.25 21v-4.5M12 3v2.25m6.364.364.707.707M21 12h-2.25m-.364 6.364-.707.707M12 21V12m0 0H4.5m7.5 0h7.5M12 12V3m0 0v2.25m-6.364.364-.707.707M3 12h2.25m.364 6.364.707.707" />
+    </svg>
 );
 
 function Home() {
   return (
     <>
-      {/* --- 1. SECCIÓN HERO (Ahora con texto blanco) --- */}
+      {/* --- 1. SECCIÓN HERO (Con Animación) --- */}
       <section className="bg-transparent pt-40 pb-32">
         <div className="container mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight max-w-3xl mx-auto">
-            Innovamos tu empresa con tecnología, IA y soluciones digitales.
+          <h1 
+            className="text-5xl md:text-7xl font-extrabold text-white leading-tight max-w-4xl mx-auto"
+            data-aos="fade-up"
+          >
+            Socios en tu <span className="bg-gradient-to-r from-accent-start to-accent-end bg-clip-text text-transparent">Transformación Digital</span>
           </h1>
-          <p className="text-lg md:text-xl text-slate-300 mt-6 max-w-2xl mx-auto">
-            Somos tu socio estratégico para transformar y asegurar tu negocio en el mundo digital.
+          <p 
+            className="text-lg md:text-xl text-text-muted mt-6 max-w-2xl mx-auto"
+            data-aos="fade-up" data-aos-delay="200"
+          >
+            No solo creamos software. Integramos Sistemas Empresariales, IA y Marketing para optimizar tu negocio.
           </p>
-          <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+          <div 
+            className="mt-10 flex flex-col sm:flex-row justify-center gap-4"
+            data-aos="fade-up" data-aos-delay="400"
+          >
             <Link 
               to="/contacto" 
-              className="bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition"
+              className="bg-gradient-to-r from-accent-start to-accent-end text-dark-bg font-semibold px-8 py-3 rounded-lg shadow-lg hover:opacity-90 transition"
             >
-              Cotiza aquí
+              Agendar Consultoría
             </Link>
             <Link 
               to="/servicios" 
-              className="bg-white text-blue-600 font-semibold px-8 py-3 rounded-lg border border-blue-600 hover:bg-gray-100 transition"
+              className="bg-dark-card text-text-light font-semibold px-8 py-3 rounded-lg hover:bg-gray-700 transition"
             >
-              Explorar servicios
+              Explorar Servicios
             </Link>
           </div>
         </div>
       </section>
 
-      {/* --- 2. SECCIÓN DE SERVICIOS (¡Ahora con fondo blanco!) --- */}
-      <section className="bg-white py-20 text-gray-900">
+      {/* --- 2. ¡NUEVA SECCIÓN DE PILARES ESTRATÉGICOS! --- */}
+      <section className="content-card" data-aos="fade-up">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-extrabold">
-              Nuestros Servicios
+            <h2 className="text-4xl font-extrabold text-white">
+              Nuestros Pilares Estratégicos
             </h2>
-            <p className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
-              Soluciones diseñadas para impulsar tu crecimiento y seguridad.
+            <p className="text-lg text-text-muted mt-4 max-w-2xl mx-auto">
+              Soluciones integrales que cubren cada área de tu negocio.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            <ServiceCard 
-              icon={<WebIcon />}
-              title="Desarrollo Web"
-              description="Creamos sitios web y aplicaciones robustas, rápidas y escalables adaptadas a tus necesidades."
-            />
-            <ServiceCard 
-              icon={<SecurityIcon />}
-              title="Seguridad Informática"
-              description="Protegemos tus activos digitales con auditorías, pentesting y estrategias de ciberseguridad avanzadas."
-            />
-            <ServiceCard 
-              icon={<AiIcon />}
-              title="Autenticación & IA"
-              description="Integramos sistemas de autenticación seguros y soluciones de IA para optimizar tus procesos."
-            />
+          {/* ¡CAMBIAMOS LOS ENLACES (to) AQUÍ! */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            {/* Pilar 1 */}
+            <Link 
+              to="/servicios#pilar-web" // <-- ¡Añadimos el hash link!
+              className="block bg-dark-card p-8 rounded-xl shadow-xl border border-gray-700 hover:border-accent-start transition-colors"
+              data-aos="fade-up" data-aos-delay="100"
+            >
+              <div className="bg-gray-900 p-3 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                <PilarIconWeb />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-3">Web y E-commerce</h3>
+              <p className="text-text-muted">Tiendas online, apps móviles y sitios web corporativos.</p>
+            </Link>
+
+            {/* Pilar 2 */}
+            <Link 
+              to="/servicios#pilar-sistemas" // <-- ¡Añadimos el hash link!
+              className="block bg-dark-card p-8 rounded-xl shadow-xl border border-gray-700 hover:border-accent-start transition-colors"
+              data-aos="fade-up" data-aos-delay="200"
+            >
+              <div className="bg-gray-900 p-3 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                <PilarIconSistemas />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-3">Sistemas y Automatización</h3>
+              <p className="text-text-muted">Software ERP, Logística (SUNAT), IA y Servicios Cloud.</p>
+            </Link>
+
+            {/* Pilar 3 */}
+            <Link 
+              to="/servicios#pilar-marketing" // <-- ¡Añadimos el hash link!
+              className="block bg-dark-card p-8 rounded-xl shadow-xl border border-gray-700 hover:border-accent-start transition-colors"
+              data-aos="fade-up" data-aos-delay="300"
+            >
+              <div className="bg-gray-900 p-3 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                <PilarIconMarketing />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-3">Marketing y Estrategia</h3>
+              <p className="text-text-muted">Power BI, Marketing Conversacional y Auditorías de Seguridad.</p>
+            </Link>
+            
+            {/* Pilar 4 */}
+            <Link 
+              to="/servicios#pilar-industrias" // <-- ¡Añadimos el hash link!
+              className="block bg-dark-card p-8 rounded-xl shadow-xl border border-gray-700 hover:border-accent-start transition-colors"
+              data-aos="fade-up" data-aos-delay="400"
+            >
+              <div className="bg-gray-900 p-3 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                <PilarIconIndustria />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-3">Soluciones por Industria</h3>
+              <p className="text-text-muted">Soluciones para Turismo, Constructoras y Educación.</p>
+            </Link>
+
           </div>
         </div>
       </section>
 
-      {/* --- 3. SECCIÓN "SOBRE NOSOTROS" (¡Ahora con fondo blanco!) --- */}
-      <section className="bg-white py-20 text-gray-900">
+      {/* --- 3. SECCIÓN "SOBRE NOSOTROS" (Tarjeta oscura flotante) --- */}
+      <section className="content-card" data-aos="fade-up">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             
-            <div>
-              <span className="text-blue-600 font-semibold uppercase">Sobre Nosotros</span>
-              <h2 className="text-4xl font-extrabold mt-2">
+            <div data-aos="fade-right">
+              <span className="font-semibold uppercase bg-gradient-to-r from-accent-start to-accent-end bg-clip-text text-transparent">Sobre Nosotros</span>
+              <h2 className="text-4xl font-extrabold mt-2 text-white">
                 Apasionados por la Tecnología y la Ciberseguridad
               </h2>
-              <p className="text-lg text-gray-600 mt-6 leading-relaxed">
+              <p className="text-lg text-text-muted mt-6 leading-relaxed">
                 Somos un equipo dedicado a brindar soluciones innovadoras que no solo cumplen, sino que superan las expectativas. 
-                Nuestra misión es ser tu aliado tecnológico, garantizando la seguridad y eficiencia de tus operaciones.
+                Nuestra misión es ser tu aliado tecnológico.
               </p>
               <Link 
                 to="/nosotros" 
-                className="inline-block mt-8 bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition"
+                className="inline-block mt-8 bg-gradient-to-r from-accent-start to-accent-end text-dark-bg font-semibold px-8 py-3 rounded-lg shadow-lg hover:opacity-90 transition"
               >
                 Conoce más
               </Link>
             </div>
             
-            <div>
+            <div data-aos="fade-left">
               <img 
-                src="https://placehold.co/600x400/3b82f6/white?text=Nuestro+Equipo" 
+                src="https://placehold.co/600x400/1f2937/10b981?text=Nuestro+Equipo" 
                 alt="Equipo de Aliia Tech"
                 className="rounded-xl shadow-2xl"
               />
@@ -113,18 +165,18 @@ function Home() {
         </div>
       </section>
 
-      {/* --- 4. SECCIÓN "CALL TO ACTION (CTA)" (¡Se queda azul, está bien!) --- */}
-      <section className="bg-blue-600 py-20">
+      {/* --- 4. SECCIÓN "CALL TO ACTION (CTA)" (Sobre fondo oscuro) --- */}
+      <section className="bg-dark-bg py-20" data-aos="fade-up">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-4xl font-extrabold text-white">
             ¿Listo para transformar tu negocio?
           </h2>
-          <p className="text-lg text-blue-100 mt-4 max-w-2xl mx-auto">
+          <p className="text-lg text-text-muted mt-4 max-w-2xl mx-auto">
             Hablemos hoy mismo. Estamos aquí para ayudarte a alcanzar tus objetivos tecnológicos y de seguridad.
           </p>
           <Link 
             to="/contacto" 
-            className="inline-block mt-8 bg-white text-blue-600 font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-gray-100 transition"
+            className="inline-block mt-8 bg-gradient-to-r from-accent-start to-accent-end text-dark-bg font-semibold px-8 py-3 rounded-lg shadow-lg hover:opacity-90 transition"
           >
             Contáctanos ahora
           </Link>

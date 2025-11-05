@@ -38,7 +38,6 @@ function Navbar() {
       >
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           
-          {/* Logo (siempre blanco) */}
           <Link to="/" className="text-2xl font-bold text-white transition-colors duration-300">
             Aliia Tech
           </Link>
@@ -51,7 +50,7 @@ function Navbar() {
             <NavLink to="/blog" className={linkClass}>Blog</NavLink>
             <Link 
               to="/contacto" 
-              className="ml-4 px-5 py-2 rounded-lg font-semibold text-blue-600 bg-white hover:bg-gray-100 shadow transition"
+              className="ml-4 px-5 py-2 rounded-lg font-semibold text-primary bg-white hover:bg-gray-100 shadow transition"
             >
               Contacto
             </Link>
@@ -73,11 +72,12 @@ function Navbar() {
       </nav>
 
       {/* --- 2. BOTÓN DE HAMBURGUESA FLOTANTE --- */}
-      {/* Este botón APARECE al hacer scroll */}
+      {/* ¡AQUÍ ESTÁ LA CORRECCIÓN! */}
       <button 
         onClick={() => setIsMenuOpen(true)}
         aria-label="Abrir menú"
-        className={`fixed top-6 right-6 z-50 w-14 h-14 bg-white rounded-full shadow-lg flex items-center justify-center text-gray-900 transition-all duration-300 ${scrolled ? 'opacity-100 scale-100' : 'opacity-0 scale-75 pointer-events-none'}`}
+        // ¡Cambiamos a fondo blanco (bg-white) y texto oscuro (text-dark-bg)!
+        className={`fixed top-6 right-6 z-50 w-14 h-14 bg-white rounded-full shadow-lg flex items-center justify-center text-dark-bg transition-all duration-300 ${scrolled ? 'opacity-100 scale-100' : 'opacity-0 scale-75 pointer-events-none'}`}
       >
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-7 h-7">
           <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />

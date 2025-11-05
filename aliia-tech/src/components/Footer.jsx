@@ -1,4 +1,3 @@
-// src/components/Footer.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -16,8 +15,8 @@ const XIcon = () => ( // Icono de X (Twitter)
 
 function Footer() {
   return (
-    // ¡CAMBIO DE COLOR! De bg-gray-800 a bg-slate-900 (más oscuro)
-    <footer className="bg-slate-900 text-slate-300">
+    // Usamos el fondo oscuro 'dark-bg' de nuestro config
+    <footer className="bg-dark-bg text-text-muted border-t border-gray-700">
       <div className="container mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           
@@ -26,54 +25,64 @@ function Footer() {
             <Link to="/" className="text-2xl font-bold text-white">
               Aliia Tech
             </Link>
-            <p className="mt-4 text-slate-400">
+            <p className="mt-4 text-text-muted">
               Transformamos negocios con tecnología e innovación.
             </p>
             <div className="flex space-x-4 mt-6">
-              <a href="#" className="text-slate-400 hover:text-white transition">
+              <a href="#" className="text-text-muted hover:text-white transition">
                 <LinkedInIcon />
               </a>
-              <a href="#" className="text-slate-400 hover:text-white transition">
+              <a href="#" className="text-text-muted hover:text-white transition">
                 <XIcon />
               </a>
               {/* Añade más redes si quieres */}
             </div>
           </div>
 
-          {/* Columna 2: Navegación */}
+          {/* Columna 2: ¡PILARES 1 y 4 ACTUALIZADOS! */}
           <div>
-            <h3 className="text-lg font-semibold text-white uppercase">Navegación</h3>
+            <h3 className="text-lg font-semibold text-white uppercase tracking-wider">Web e Industrias</h3>
             <ul className="mt-4 space-y-2">
-              <li><Link to="/nosotros" className="hover:text-white transition">Nosotros</Link></li>
-              <li><Link to="/servicios" className="hover:text-white transition">Servicios</Link></li>
-              <li><Link to="/blog" className="hover:text-white transition">Blog</Link></li>
-              <li><Link to="/contacto" className="hover:text-white transition">Contacto</Link></li>
+              <li><Link to="/servicios/diseno-tiendas-online" className="hover:text-white transition">Tiendas Online</Link></li>
+              <li><Link to="/servicios/desarrollo-apps-moviles" className="hover:text-white transition">Aplicaciones Móviles</Link></li>
+              <li className="pt-2"><Link to="/servicios/soluciones-turismo" className="hover:text-white transition">Turismo y Hoteles</Link></li>
+              <li><Link to="/servicios/soluciones-constructoras" className="hover:text-white transition">Constructoras</Link></li>
+              <li><Link to="/servicios/soluciones-educacion" className="hover:text-white transition">Educación</Link></li>
+              <li><Link to="/servicios/diseno-interiores" className="hover:text-white transition">Diseño de Interiores</Link></li>
             </ul>
           </div>
 
-          {/* Columna 3: Servicios */}
+          {/* Columna 3: ¡PILARES 2 y 3 ACTUALIZADOS! */}
           <div>
-            <h3 className="text-lg font-semibold text-white uppercase">Servicios</h3>
+            <h3 className="text-lg font-semibold text-white uppercase tracking-wider">Sistemas y Estrategia</h3>
             <ul className="mt-4 space-y-2">
-              <li><Link to="/servicios/sistemas-y-cloud" className="hover:text-white transition">Sistemas y Cloud</Link></li>
-              <li><Link to="/servicios/web-y-ecommerce" className="hover:text-white transition">Web & E-commerce</Link></li>
-              <li><Link to="/servicios/consultoria-e-innovacion" className="hover:text-white transition">Consultoría</Link></li>
+              <li><Link to="/servicios/sistemas-logistica-sunat" className="hover:text-white transition">Logística y SUNAT</Link></li>
+              <li><Link to="/servicios/sistemas-erp-crm" className="hover:text-white transition">Sistemas ERP/CRM</Link></li>
+              <li><Link to="/servicios/soluciones-ia" className="hover:text-white transition">Soluciones con IA</Link></li>
+              <li><Link to="/servicios/servicios-cloud" className="hover:text-white transition">Servicios Cloud</Link></li>
+              <li><Link to="/servicios/analisis-power-bi" className="hover:text-white transition">Análisis (Power BI)</Link></li>
+              <li><Link to="/servicios/auditoria-seguridad" className="hover:text-white transition">Auditoría de Seguridad</Link></li>
             </ul>
           </div>
 
           {/* Columna 4: Contacto */}
           <div>
-            <h3 className="text-lg font-semibold text-white uppercase">Contacto</h3>
-            <ul className="mt-4 space-y-2 text-slate-400">
+            <h3 className="text-lg font-semibold text-white uppercase tracking-wider">Contacto</h3>
+            <ul className="mt-4 space-y-2 text-text-muted">
               <li>contacto@aliiia.tech</li>
               <li>+51 969 980 152</li>
               <li>Lima, Perú</li>
+              <li className="pt-4">
+                <Link to="/contacto" className="font-bold text-accent-start hover:text-white transition">
+                  Envíanos un mensaje →
+                </Link>
+              </li>
             </ul>
           </div>
 
         </div>
         
-        <div className="mt-12 border-t border-slate-700 pt-8 text-center text-slate-500">
+        <div className="mt-12 border-t border-gray-700 pt-8 text-center text-text-muted">
           <p>&copy; {new Date().getFullYear()} Aliia Tech. Todos los derechos reservados.</p>
         </div>
       </div>
