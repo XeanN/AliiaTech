@@ -1,6 +1,6 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
-import React, { useLayoutEffect } from 'react';
-import AOS from 'aos'; // Importamos AOS
+import { HashRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import React, { useLayoutEffect, useEffect } from 'react';
+import AOS from 'aos';
 
 // Componentes
 import Navbar from "../components/Navbar.jsx";
@@ -13,37 +13,53 @@ import Services from "../pages/Services.jsx";
 import About from "../pages/About.jsx";
 import Blog from "../pages/Blog.jsx";
 import Contact from "../pages/Contact.jsx";
-import ServiceDetail from "../pages/ServiceDetail.jsx"; // ¡La plantilla de 8 pasos!
+import ServiceDetail from "../pages/ServiceDetail.jsx";
 import BlogDetail from "../pages/BlogDetail.jsx"; 
 
 // Helper para scroll-to-top y refrescar AOS
 const Wrapper = ({children}) => {
   const location = useLocation();
+  
   useLayoutEffect(() => {
     document.documentElement.scrollTo(0, 0);
-    AOS.refresh(); 
   }, [location.pathname]);
-  return children
+
+  useEffect(() => {
+    // Refresca AOS después de que el DOM se actualice
+    const timer = setTimeout(() => {
+      AOS.refresh();
+    }, 100);
+    
+    return () => clearTimeout(timer);
+  }, [location.pathname]);
+
+  return children;
 }
 
 function AppRouter() {
+  useEffect(() => {
+    // Inicializa AOS cuando el componente se monte
+    AOS.init({
+      duration: 700,
+      once: true,
+      offset: 100,
+      disable: false,
+    });
+  }, []);
+
   return (
     <Router>
       <Wrapper>
         <Navbar />
         <WhatsAppButton />
         <Routes>
-          {/* Rutas Estáticas */}
           <Route path="/" element={<Home />} />
           <Route path="/servicios" element={<Services />} />
           <Route path="/nosotros" element={<About />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contacto" element={<Contact />} />
-
-          {/* Rutas Dinámicas (¡Corregidas!) */}
           <Route path="/servicios/:serviceSlug" element={<ServiceDetail />} />
           <Route path="/blog/:postSlug" element={<BlogDetail />} /> 
-        
         </Routes>
         <Footer />
       </Wrapper>
