@@ -19,7 +19,7 @@ function About() {
       <PageHeader 
         title="Sobre Nosotros"
         subtitle="Conoce más sobre nuestro equipo, nuestra misión y los valores que nos impulsan."
-        imageUrl="https://placehold.co/1920x400/5b21b6/white?text=Sobre+Nosotros"
+        imageUrl="public/Hero-Nosotros.jpg"
       />
 
       {/* Contenido de Nosotros (¡AHORA CON TEMA OSCURO!) */}

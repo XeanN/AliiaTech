@@ -9,7 +9,7 @@ function Blog() {
       <PageHeader 
         title="Blog & Novedades"
         subtitle="Aprende sobre innovación, inteligencia artificial, marketing y transformación digital."
-        imageUrl="https://placehold.co/1920x400/0891b2/white?text=Nuestro+Blog"
+        imageUrl="public/Hero-Blog.jpg"
       />
 
       <section className="content-card" data-aos="fade-up">

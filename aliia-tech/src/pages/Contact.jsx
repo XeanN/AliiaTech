@@ -136,7 +136,7 @@ ${formData.message}
       <PageHeader 
         title="Contáctanos"
         subtitle="Estamos aquí para ayudarte a transformar tu negocio con tecnología."
-        imageUrl="https://placehold.co/1920x400/be123c/white?text=Cont%C3%A1ctanos"
+        imageUrl="public/Hero_Contacto.jpg"
       />
 
       <section className="content-card" data-aos="fade-up">

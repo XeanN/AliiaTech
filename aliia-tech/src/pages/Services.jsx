@@ -95,7 +95,7 @@ function Services() {
       <PageHeader 
         title="Nuestros Pilares de Servicio"
         subtitle="Soluciones integrales para cada área de tu Transformación Digital."
-        imageUrl="https://placehold.co/1920x400/0d9488/white?text=Servicios"
+        imageUrl="public/Hero-Servicios.jpg"
       />
 
       <section className="content-card">
