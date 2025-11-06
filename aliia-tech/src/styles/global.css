@@ -1,41 +1,58 @@
-    /* Importamos la fuente */
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        /* Importamos la fuente */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-    /* ¡BORRAMOS TODO LO DE @tailwind Y @apply! */
+        /* ¡BORRAMOS TODO LO DE @tailwind Y @apply! */
 
-    /* Aplicamos el fondo oscuro y la fuente Poppins al body */
-    body {
-    /* ¡Usamos los nombres de colores que definimos en index.html! */
-    background-color: #111827; /* (dark-bg) */
-    color: #E5E7EB;           /* (text-light) */
-    font-family: 'Poppins', sans-serif;
-    overflow-x: hidden; /* Previene scroll horizontal por las animaciones */
+        /* Aplicamos el fondo oscuro y la fuente Poppins al body */
+        body {
+        /* ¡Usamos los nombres de colores que definimos en index.html! */
+        background-color: #111827; /* (dark-bg) */
+        color: #E5E7EB;           /* (text-light) */
+        font-family: 'Poppins', sans-serif;
+        overflow-x: hidden; /* Previene scroll horizontal por las animaciones */
+        }
+
+        /* ¡NUEVA CLASE! para las tarjetas "flotantes" oscuras */
+        .content-card {
+        background-color: #1f2937; /* (dark-card) */
+        color: #E5E7EB;           /* (text-light) */
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        }
+
+        /* Estilos para los textos dentro de las tarjetas oscuras */
+        .content-card h1,
+        .content-card h2,
+        .content-card h3,
+        .content-card h4 {
+        color: #FFFFFF; /* Blanco puro para títulos */
+        }
+
+        .content-card p,
+        .content-card li {
+        color: #9CA3AF; /* (text-muted) */
+        }
+
+        /* Helper para texto con degradado (¡OJO!)
+        Como @apply no funciona, tenemos que usar la clase de Tailwind
+        directamente en el JSX. He actualizado Home.jsx para que lo haga.
+        */
+
+        /* ... (El contenido que ya tienes en global.css) ... */
+
+
+    /* --- ¡AÑADE ESTO AL FINAL! --- */
+
+    /* Estilo para el botón de "Cotiza gratis hoy" */
+    .hero-cta-button {
+    background-color: #34f8d1; /* Color cian/menta brillante */
+    /* Sombra (glow) */
+    box-shadow: 0 0 15px 5px rgba(52, 248, 209, 0.4);
+    transition: all 0.3s ease;
     }
 
-    /* ¡NUEVA CLASE! para las tarjetas "flotantes" oscuras */
-    .content-card {
-    background-color: #1f2937; /* (dark-card) */
-    color: #E5E7EB;           /* (text-light) */
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    .hero-cta-button:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+    /* Sombra (glow) más intensa */
+    box-shadow: 0 0 25px 10px rgba(52, 248, 209, 0.5);
     }
-
-    /* Estilos para los textos dentro de las tarjetas oscuras */
-    .content-card h1,
-    .content-card h2,
-    .content-card h3,
-    .content-card h4 {
-    color: #FFFFFF; /* Blanco puro para títulos */
-    }
-
-    .content-card p,
-    .content-card li {
-    color: #9CA3AF; /* (text-muted) */
-    }
-
-    /* Helper para texto con degradado (¡OJO!)
-    Como @apply no funciona, tenemos que usar la clase de Tailwind
-    directamente en el JSX. He actualizado Home.jsx para que lo haga.
-    */
-
-    

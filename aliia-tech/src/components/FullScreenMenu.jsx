@@ -1,7 +1,7 @@
-    import React, { useEffect } from 'react'; // Importamos useEffect
+    import React, { useEffect, useState } from 'react'; // <-- 1. IMPORTAMOS useState
     import { NavLink, Link } from 'react-router-dom';
 
-    // --- Iconos de Contacto y Redes Sociales ---
+    // --- Iconos de Contacto y Redes Sociales (Sin cambios) ---
     const MapPinIcon = () => (
     <svg fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" className="w-6 h-6 mr-3 text-cyan-400"><path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
     );
@@ -15,7 +15,23 @@
     <svg fill="currentColor" viewBox="0 0 24 24" className="h-7 w-7" aria-hidden="true"><path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd" /></svg>
     );
     const InstagramIcon = () => (
-    <svg fill="currentColor" viewBox="0 0 24 24" className="h-7 w-7" aria-hidden="true"><path fillRule="evenodd" d="M12.315 2.315a.8.8 0 01.8.8v2.015c.618.062 1.23.155 1.83.28V4.62c0-.441.359-.8.8-.8s.8.359.8.8v1.075a8.7 8.7 0 011.83.74c.433.15.65.658.5.1.085s-.658-.433-1.085-.5a8.7 8.7 0 01-1.83-.74V1.38c0-.441-.359-.8-.8-.8s-.8.359-.8.8v2.015c-.618.062-1.23.155-1.83.28V2.12c0-.441.359-.8.8-.8zM12 1.315a.8.8 0 01.8.8v2.015c-.618.062-1.23.155-1.83.28V2.12c0-.441.359-.8.8-.8zM12 22.685a.8.8 0 01-.8-.8v-2.015c.618-.062 1.23-.155 1.83-.28v2.795c0 .441-.359.8-.8.8zM12 21.315a.8.8 0 01.8.8v2.015c.618-.062 1.23-.155 1.83-.28V21.88c0 .441.359.8.8.8s.8-.359.8-.8v-1.075a8.7 8.7 0 011.83-.74c.433-.15.65.658.5-1.085s-.658.433-1.085.5a8.7 8.7 0 01-1.83.74v2.795c0 .441-.359.8-.8.8s-.8-.359-.8.8v-2.015c-.618-.062-1.23-.155-1.83-.28v2.795c0 .441.359.8.8.8z" clipRule="evenodd" /><path d="M12 4a8 8 0 100 16 8 8 0 000-16zM6.62 9.38a.8.8 0 00-.8-.8h-1.04a.8.8 0 00-.8.8v5.24a.8.8 0 00.8.8h1.04a.8.8 0 00.8-.8V9.38zm3.28 0a.8.8 0 00-.8-.8h-1.04a.8.8 0 00-.8.8v5.24a.8.8 0 00.8.8h1.04a.8.8 0 00.8-.8V9.38zm3.28 0a.8.8 0 00-.8-.8h-1.04a.8.8 0 00-.8.8v5.24a.8.8 0 00.8.8h1.04a.8.8 0 00.8-.8V9.38zm3.28 0a.8.8 0 00-.8-.8h-1.04a.8.8 0 00-.8.8v5.24a.8.8 0 00.8.8h1.04a.8.8 0 00.8-.8V9.38z" /></svg>
+    <svg
+        fill="none" // Importante: le decimos que no tenga relleno
+        stroke="currentColor" // El trazo usará el color del texto
+        strokeWidth={2} // Puedes cambiar el grosor de la línea (ej: 1.5)
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        viewBox="0 0 24 24" // Usamos un lienzo de 24x24, muy estándar
+        className="h-7 w-7" // Tus clases de tamaño están perfectas
+        aria-hidden="true"
+    >
+        {/* El cuadrado exterior redondeado */}
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+        {/* El círculo del lente */}
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+        {/* El punto de arriba (flash) */}
+        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+    </svg>
     );
     const LinkedInIcon = () => (
     <svg fill="currentColor" viewBox="0 0 24 24" className="h-7 w-7" aria-hidden="true"><path fillRule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.783-1.75-1.75s.784-1.75 1.75-1.75 1.75.783 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clipRule="evenodd" /></svg>
@@ -24,7 +40,7 @@
     <svg fill="currentColor" viewBox="0 0 24 24" className="h-7 w-7" aria-hidden="true"><path d="M7.93 10.155c.348-.06.69-.09 1.028-.09.93 0 1.635.495 1.635 1.335 0 .885-.75 1.38-1.77 1.38h-1.74v-2.625h.847zm.847 6.135c-.405 0-.795-.03-1.17-.09v-4.83h1.83c1.47 0 2.49.885 2.49 2.37 0 1.74-1.11 2.55-2.61 2.55h-.54zm-2.025 2.025c.57.12 1.155.18 1.755.18 1.95 0 3.315-.99 3.315-2.82 0-1.47-.96-2.4-2.235-2.73.96-.27 1.695-1.125 1.695-2.31 0-1.425-1.02-2.475-2.91-2.475-.615 0-1.23.075-1.815.21v9.945h.195zM15 13.515h3.015v-1.29H15v1.29zm0 2.895h3.015v-1.29H15v1.29zM16.59 9h-2.34v-1.5h5.505V9h-2.34v7.41h-.825V9zM0 2.25h24v19.5H0V2.25z" /></svg>
     );
 
-    // --- Clases de Estilo del Menú ---
+    // --- Clases de Estilo del Menú (Sin cambios) ---
     const mainNavLinkClass = `
     block text-3xl font-bold text-white relative group 
     py-2 transition-all duration-300 ease-in-out w-fit
@@ -43,7 +59,7 @@
     const subLinkClass = "block text-base font-light text-gray-400 hover:text-cyan-300 hover:translate-x-2 transition-all duration-300 py-1";
     const contactTextClass = "text-lg text-gray-300 hover:text-white transition-colors duration-300";
 
-    // --- NUEVO COMPONENTE: Estilos para el Scroll ---
+    // --- Componente de Estilos para el Scroll (Sin cambios) ---
     const ScrollbarStyles = () => (
     <style>{`
         /* Firefox */
@@ -75,31 +91,25 @@
 
 
     function FullScreenMenu({ onClose }) {
-    
-    // --- NUEVO HOOK: Bloquear el scroll del body ---
+        
+    // --- 2. AÑADIMOS EL ESTADO ---
+    const [isServicesOpen, setIsServicesOpen] = useState(false);
+
     useEffect(() => {
-        // Guardar el estado original del overflow
         const originalOverflow = document.body.style.overflow;
-        
-        // Bloquear el scroll del body
         document.body.style.overflow = 'hidden';
-        
-        // Función de limpieza: Se ejecuta cuando el componente se desmonta
         return () => {
-        // Restaurar el estado original
         document.body.style.overflow = originalOverflow;
         };
-    }, []); // El array vacío [] asegura que esto se ejecute solo al montar y desmontar
+    }, []); 
 
     return (
-        // Usamos un Fragmento <> para incluir los estilos y el div principal
         <>
         <ScrollbarStyles />
         
-        {/* CAMBIO: Añadida la clase 'elegant-scroll' */}
         <div className="fixed inset-0 z-[100] p-8 bg-dark-bg bg-opacity-95 backdrop-blur-sm text-white animate-menuFadeIn overflow-y-auto elegant-scroll">
             
-            {/* 1. Cabecera */}
+            {/* 1. Cabecera (Sin cambios) */}
             <div className="container mx-auto px-6 py-4 flex justify-between items-center">
             <span className="text-2xl font-bold text-white block">Aliia Tech</span>
             <button onClick={onClose} className="text-white hover:text-cyan-400 transition-all duration-300 hover:rotate-90" aria-label="Cerrar menú">
@@ -111,14 +121,40 @@
 
             {/* 2. Contenido del Menú */}
             <div className="py-12">
-            <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
+            {/* Esta es la estructura de 3 columnas original */}
+            <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-y-4 md:gap-10">
                 
                 {/* --- COLUMNA 1: INICIO Y SERVICIOS --- */}
                 <div>
                 <NavLink to="/" onClick={onClose} className={`${mainNavLinkClass} ${mainNavLinkHoverEffect}`}>Inicio</NavLink>
-                <NavLink to="/servicios" onClick={onClose} className={`${mainNavLinkClass} ${mainNavLinkHoverEffect}`}>Servicios</NavLink>
+                
+                {/* --- 3. INICIO DE LOS CAMBIOS --- */}
+                
+                {/* Botón Desplegable para Móvil */}
+                <button 
+                    onClick={() => setIsServicesOpen(!isServicesOpen)}
+                    className={`${mainNavLinkClass} ${mainNavLinkHoverEffect} md:hidden flex justify-between items-center w-full`}
+                >
+                    <span>Servicios</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" 
+                        className={`w-8 h-8 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : 'rotate-0'}`}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>
+                </button>
 
-                <div className="mt-4 pl-4 border-l-2 border-cyan-400/50 space-y-8">
+                {/* Enlace Estándar para Escritorio */}
+                <NavLink 
+                    to="/servicios" 
+                    onClick={onClose} 
+                    className={`${mainNavLinkClass} ${mainNavLinkHoverEffect} hidden md:block`}
+                >
+                    Servicios
+                </NavLink>
+                
+                {/* 4. CLASES CONDICIONALES AÑADIDAS AQUÍ */}
+                <div className={`mt-4 pl-4 border-l-2 border-cyan-400/50 space-y-8 
+                                    ${isServicesOpen ? 'block' : 'hidden'} md:block`}
+                >
                     
                     <div className="group">
                     <span className={pillarTitleClass}>Web y E-commerce</span>
@@ -145,7 +181,11 @@
                 </div>
 
                 {/* --- COLUMNA 2: MARKETING Y SOLUCIONES --- */}
-                <div className="space-y-8">
+                {/* 4. CLASES CONDICIONALES AÑADIDAS AQUÍ */}
+                <div className={`space-y-8 ${isServicesOpen ? 'block' : 'hidden'} md:block md:pt-[119px]`}>
+                    {/* ↓↓↓ ESTE ES EL NUEVO DIV QUE AÑADIMOS (con las clases de borde y padding) ↓↓↓ */}
+                    <div className="space-y-8 pl-4 border-l-2 border-cyan-400/50">
+
                 <div className="group">
                     <span className={pillarTitleClass}>Marketing y Estrategia</span>
                     <div className="w-1/4 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mb-4 group-hover:w-1/2 transition-all duration-300"></div>
@@ -169,8 +209,9 @@
                     </div>
                 </div>
                 </div>
+                </div>
 
-                {/* --- COLUMNA 3: NOSOTROS, BLOG Y CONTACTO --- */}
+                {/* --- COLUMNA 3: NOSOTROS, BLOG Y CONTACTO (Sin cambios) --- */}
                 <div>
                 <div className="flex flex-col space-y-4 mb-10">
                     <NavLink to="/nosotros" onClick={onClose} className={`${mainNavLinkClass} ${mainNavLinkHoverEffect}`}>Nosotros</NavLink>
