@@ -19,7 +19,7 @@ function About() {
       <PageHeader 
         title="Sobre Nosotros"
         subtitle="Conoce más sobre nuestro equipo, nuestra misión y los valores que nos impulsan."
-        imageUrl="/Hero-Nosotros.jpg"
+        imageUrl="/AliiaTech/Hero-Nosotros.jpg"
       />
 
       {/* Contenido de Nosotros (¡AHORA CON TEMA OSCURO!) */}

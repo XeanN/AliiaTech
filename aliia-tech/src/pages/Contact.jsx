@@ -136,7 +136,7 @@ ${formData.message}
       <PageHeader 
         title="Contáctanos"
         subtitle="Estamos aquí para ayudarte a transformar tu negocio con tecnología."
-        imageUrl="/Hero_Contacto.jpg"
+        imageUrl="/AliiaTech/Hero_Contacto.jpg"
       />
 
       <section className="content-card" data-aos="fade-up">
