@@ -9,7 +9,7 @@ function Blog() {
       <PageHeader 
         title="Blog & Novedades"
         subtitle="Aprende sobre innovación, inteligencia artificial, marketing y transformación digital."
-        imageUrl="public/Hero-Blog.jpg"
+        imageUrl="/Hero-Blog.jpg"
       />
 
       <section className="content-card" data-aos="fade-up">
