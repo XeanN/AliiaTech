@@ -16,8 +16,8 @@ const PilarIconSistemas = () => (
 );
 const PilarIconMarketing = () => (
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10 text-accent-start">
-     <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" />
-     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" />
+    <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" />
+    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" />
   </svg>
 );
 const PilarIconIndustria = () => (
@@ -95,7 +95,7 @@ function Services() {
       <PageHeader 
         title="Nuestros Pilares de Servicio"
         subtitle="Soluciones integrales para cada área de tu Transformación Digital."
-        imageUrl="/Hero-Servicios.jpg"
+        imageUrl="/AliiaTech/Hero-Servicios.jpg"
       />
 
       <section className="content-card">

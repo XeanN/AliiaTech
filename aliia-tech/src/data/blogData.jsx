@@ -7,7 +7,7 @@
         slug: "como-ia-transforma-empresas",
         title: "Cómo la Inteligencia Artificial está transformando las empresas",
         shortDescription: "Explora cómo las herramientas de IA pueden ayudarte a automatizar tareas y aumentar tus ventas.",
-        imageUrl: "/IA-Negocios.jpg ",
+        imageUrl: "/AliiaTech/IA-Negocios.jpg ",
         author: "CEO de Aliia Tech",
         date: "5 de Noviembre, 2025",
         // --- CONTENIDO EXPANDIDO ---
@@ -63,7 +63,7 @@
         slug: "5-estrategias-tienda-online",
         title: "5 estrategias clave para posicionar tu tienda online",
         shortDescription: "Optimiza tu e-commerce con SEO, automatización y estrategias digitales modernas.",
-        imageUrl: "/E-commerce.jpg",
+        imageUrl: "/AliiaTech/E-commerce.jpg",
         author: "Especialista en E-commerce",
         date: "1 de Noviembre, 2025",
         // --- CONTENIDO EXPANDIDO ---
@@ -121,7 +121,7 @@
         slug: "transformacion-digital-futuro",
         title: "Transformación digital: cómo preparar tu empresa para el futuro",
         shortDescription: "Descubre los pasos esenciales para digitalizar tus operaciones y mantener tu competitividad.",
-        imageUrl: "/Transformacion-Digital.jpg",
+        imageUrl: "/AliiaTech/Transformacion-Digital.jpg",
         author: "Consultor Senior",
         date: "28 de Octubre, 2025",
         // --- CONTENIDO EXPANDIDO ---
