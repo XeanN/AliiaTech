@@ -72,7 +72,7 @@ function PillarSection({ title, services, icon, aosDelay, id }) {
   );
 }
 // ---------------------------------------------
-
+        
 function Services() {
   
   // --- LÓGICA PARA EL SCROLL AUTOMÁTICO ---
