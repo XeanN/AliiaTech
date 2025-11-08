@@ -95,7 +95,7 @@ function Services() {
       <PageHeader 
         title="Nuestros Pilares de Servicio"
         subtitle="Soluciones integrales para cada área de tu Transformación Digital."
-        imageUrl="/AliiaTech/Hero-Servicios.jpg"
+        imageUrl="/Hero-Servicios.jpg"
       />
 
       <section className="content-card">

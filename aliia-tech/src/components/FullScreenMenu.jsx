@@ -313,11 +313,11 @@ return (
                         <span>Alameda Costa Norte 539</span>
                     </a>
 
-                    <a href="tel:+51987654321" className={`flex items-start ${contactTextClass}`}>
+                    <a href="tel:+51969980152" className={`flex items-start ${contactTextClass}`}>
                         <div className="flex-shrink-0">
                             <PhoneIcon />
                         </div>
-                        <span>(+51) 987654321</span>
+                        <span>(+51) 969 980 152</span>
                     </a>
 
                     <a href="mailto:info@aliiatech.com" className={`flex items-start ${contactTextClass}`}>
