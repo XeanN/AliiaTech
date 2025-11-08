@@ -147,7 +147,7 @@ return (
             >
                 <span>Servicios</span>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" 
-                    className={`w-8 h-8 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : 'rotate-0'}`}>
+                    className={`w-8 h-8 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : 'rotate-0'} group-hover:text-cyan-400`}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                 </svg>
             </button>
@@ -160,7 +160,7 @@ return (
             >
                 <span>Servicios</span>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" 
-                    className={`w-6 h-6 transition-transform duration-300 ${isDesktopServicesOpen ? 'rotate-180' : 'rotate-0'}`}>
+                    className={`w-6 h-6 transition-transform duration-300 ${isDesktopServicesOpen ? 'rotate-180' : 'rotate-0'} group-hover:text-cyan-400`}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                 </svg>
             </button>
@@ -306,7 +306,7 @@ return (
                 <div className="mt-12 pt-8 border-t border-gray-700">
                     <div className="flex flex-col space-y-4 mb-6">
                     
-                    <a href="https://www.google.com/maps/place/Alameda+Costa+Nte.+539,+Lima+15067/@-12.2210219,-76.9952504,1090m/data=!3m1!1e3!4m6!3m5!1s0x9105ba1c2b76f66b:0x25c9768b87262658!8m2!3d-12.2210727!4d-76.9933999!16s%2Fg%2F11lq2jmt9w?entry=ttu&g_ep=EgoyMDI1MTEwNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className={`flex items-start ${contactTextClass}`}>
+                    <a href="https://www.google.com/maps/place/Cloud+Service+-+Software+web/@-12.2210219,-76.9952504,1090m/data=!3m1!1e3!4m15!1m8!3m7!1s0x9105ba1c2b76f66b:0x25c9768b87262658!2sAlameda+Costa+Nte.+539,+Lima+15067!3b1!8m2!3d-12.2210727!4d-76.9933999!16s%2Fg%2F11lq2jmt9w!3m5!1s0x9105bb4246e5780f:0x68ff4cc6f3e20f72!8m2!3d-12.2211717!4d-76.9937051!16s%2Fg%2F11v_8m7dyf?entry=ttu&g_ep=EgoyMDI1MTEwNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className={`flex items-start ${contactTextClass}`}>
                         <div className="flex-shrink-0">
                             <MapPinIcon />
                         </div>
@@ -364,7 +364,7 @@ return (
                 <div className="mt-12 pt-8 border-t border-gray-700">
                     <div className="flex flex-col space-y-4 mb-6">
                     
-                    <a href="https://www.google.com/maps/place/Alameda+Costa+Nte.+539,+Lima+15067/@-12.2210219,-76.9952504,1090m/data=!3m1!1e3!4m6!3m5!1s0x9105ba1c2b76f66b:0x25c9768b87262658!8m2!3d-12.2210727!4d-76.9933999!16s%2Fg%2F11lq2jmt9w?entry=ttu&g_ep=EgoyMDI1MTEwNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className={`flex items-start ${contactTextClass}`}>
+                    <a href="https://www.google.com/maps/place/Cloud+Service+-+Software+web/@-12.2210219,-76.9952504,1090m/data=!3m1!1e3!4m15!1m8!3m7!1s0x9105ba1c2b76f66b:0x25c9768b87262658!2sAlameda+Costa+Nte.+539,+Lima+15067!3b1!8m2!3d-12.2210727!4d-76.9933999!16s%2Fg%2F11lq2jmt9w!3m5!1s0x9105bb4246e5780f:0x68ff4cc6f3e20f72!8m2!3d-12.2211717!4d-76.9937051!16s%2Fg%2F11v_8m7dyf?entry=ttu&g_ep=EgoyMDI1MTEwNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className={`flex items-start ${contactTextClass}`}>
                         <div className="flex-shrink-0">
                             <MapPinIcon />
                         </div>

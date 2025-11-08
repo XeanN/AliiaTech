@@ -1,4 +1,4 @@
-    /** @type {import('tailwindcss').Config} */
+/** @type {import('tailwindcss').Config} */
     export default {
     content: [
         "./index.html",
@@ -32,20 +32,4 @@
     plugins: [],
     }
 
-        // tailwind.config.js
-    module.exports = {
-    theme: {
-        extend: {
-        keyframes: {
-            menuFadeIn: {
-            '0%': { opacity: '0' },
-            '100%': { opacity: '1' },
-            },
-        },
-        animation: {
-            menuFadeIn: 'menuFadeIn 0.3s ease-out forwards',
-        },
-        },
-    },
-    plugins: [],
-    }
+    // <-- ¡BORRÉ EL module.exports DUPLICADO DE AQUÍ ABAJO!

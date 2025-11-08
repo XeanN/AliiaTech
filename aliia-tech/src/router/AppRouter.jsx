@@ -18,53 +18,95 @@ import BlogDetail from "../pages/BlogDetail.jsx";
 
 // Helper para scroll-to-top y refrescar AOS
 const Wrapper = ({children}) => {
-  const location = useLocation();
-  
-  useLayoutEffect(() => {
-    document.documentElement.scrollTo(0, 0);
-  }, [location.pathname]);
+  const location = useLocation();
+  
+  useLayoutEffect(() => {
+    document.documentElement.scrollTo(0, 0);
+  }, [location.pathname]);
 
-  useEffect(() => {
-    // Refresca AOS después de que el DOM se actualice
-    const timer = setTimeout(() => {
-      AOS.refresh();
-    }, 100);
-    
-    return () => clearTimeout(timer);
-  }, [location.pathname]);
+  useEffect(() => {
+    // Refresca AOS después de que el DOM se actualice
+    const timer = setTimeout(() => {
+      AOS.refresh();
+    }, 100);
+    
+    return () => clearTimeout(timer);
+  }, [location.pathname]);
 
-  return children;
+  return children;
 }
 
 function AppRouter() {
-  useEffect(() => {
-    // Inicializa AOS cuando el componente se monte
-    AOS.init({
-      duration: 700,
-      once: true,
-      offset: 100,
-      disable: false,
-    });
-  }, []);
+  useEffect(() => {
+    // Inicializa AOS
+    AOS.init({
+      duration: 700,
+      once: true,
+      offset: 100,
+      disable: false,
+    });
+  }, []);
 
-  return (
-    <Router>
-      <Wrapper>
-        <Navbar />
-        <WhatsAppButton />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/servicios" element={<Services />} />
-          <Route path="/nosotros" element={<About />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/contacto" element={<Contact />} />
-          <Route path="/servicios/:serviceSlug" element={<ServiceDetail />} />
-          <Route path="/blog/:postSlug" element={<BlogDetail />} /> 
-        </Routes>
-        <Footer />
-      </Wrapper>
-    </Router>
-  );
+  return (
+    <Router>
+      <Wrapper>
+        <div className="relative min-h-screen group">
+
+          {/* <-- FONDO GLOBAL FIJO --- */}
+          <div className="fixed top-0 left-0 w-full h-screen"> {/* ¡CAMBIO! Quitamos z-0 de aquí */}
+            
+            {/* Capa 0: Imagen (fondo) */}
+            <img
+              src="/fondito.jpg"
+              alt="Fondo de circuito"
+              className="absolute top-0 left-0 w-full h-full object-cover z-0" 
+            />
+            
+            {/* Capa 1: Video (encima) */}
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              // ¡CAMBIO! Mantenemos tu z-10
+              className="absolute top-0 left-0 w-full h-full object-cover z-10 opacity-90"
+            >
+              <source src="/videito.mp4" type="video/mp4" />
+            </video>
+
+          </div>
+          {/* <-- FIN DEL FONDO GLOBAL --- */}
+
+          {/* --- ¡AQUÍ ESTÁ LA CAPITA! (EL ARREGLO) --- */}
+          {/* Capa 2: Tinte oscuro para legibilidad (z-20) */}
+          <div 
+            className="fixed inset-0 z-20 bg-black opacity-60" 
+            aria-hidden="true" 
+          />
+          {/* --- FIN DE LA CAPITA --- */}
+
+
+          {/* <-- CONTENIDO PRINCIPAL: ¡CAMBIO! Sube a z-30 --> */}
+          <div className="relative z-30"> 
+            <Navbar />
+            <WhatsAppButton />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/servicios" element={<Services />} />
+            	<Route path="/nosotros" element={<About />} />
+          	  <Route path="/blog" element={<Blog />} />
+          	  <Route path="/contacto" element={<Contact />} />
+          	  <Route path="/servicios/:serviceSlug" element={<ServiceDetail />} />
+          	  <Route path="/blog/:postSlug" element={<BlogDetail />} /> 
+          	</Routes>
+          	<Footer />
+        	</div>
+        	{/* <-- FIN DEL CONTENIDO PRINCIPAL --- */}
+
+      	</div>
+      </Wrapper>
+    </Router>
+  );
 }
 
 export default AppRouter;

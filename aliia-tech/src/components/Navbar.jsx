@@ -3,6 +3,10 @@ import { Link, NavLink } from 'react-router-dom';
 // 1. Importamos el menú de pantalla completa
 import FullScreenMenu from './FullScreenMenu.jsx';
 
+// --- 1. ¡IMPORTA TU IMAGEN DE LOGO AQUÍ! ---
+// (Asegúrate de que la ruta a tu logo sea correcta)
+import logoImage from '/Aliia-tech.png';
+
 function Navbar() {
   // Estado para saber si se ha hecho scroll
   const [scrolled, setScrolled] = useState(false);
@@ -38,8 +42,13 @@ function Navbar() {
       >
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           
-          <Link to="/" className="text-2xl font-bold text-white transition-colors duration-300">
-            Aliia Tech
+          {/* --- ¡ESTO ES LA IMAGEN! --- */}
+          <Link to="/" className="block"> {/* 'block' es bueno para un enlace de imagen */}
+            <img 
+              src={logoImage} 
+              alt="Logo Aliia Tech"
+              className="h-8 w-auto" // <-- ¡Ajusta esta altura! h-8 = 32px.
+            />
           </Link>
 
           {/* Menú de Escritorio (Enlaces de texto) */}
