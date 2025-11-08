@@ -36,7 +36,7 @@ function Home() {
       >
         {/* Capa 0: Imagen de Galaxia (Fondo base) (z-0) */}
         <img
-          src="/AliiaTech/Ali_home.png" // Tu imagen de galaxia
+          src="/Ali_home.png" // Tu imagen de galaxia
           alt="Galaxia de fondo"
           className="absolute z-0 w-full h-full object-cover"
         />
@@ -55,7 +55,7 @@ function Home() {
           playsInline
           className="absolute z-20 w-full h-full object-cover opacity-75"
         >
-          <source src="/AliiaTech/video_home.mp4" type="video/mp4" />
+          <source src="/video_home.mp4" type="video/mp4" />
           Tu navegador no soporta el video.
         </video>
 
@@ -73,31 +73,31 @@ function Home() {
         <div className="absolute bottom-0 left-0 w-full h-full pointer-events-none opacity-90 z-30">
           {/* Montaña más lejana */}
           <img
-            src="/AliiaTech/home-header-1.png"
+            src="/home-header-1.png"
             alt=""
             className="absolute bottom-0 w-full h-auto"
           />
           {/* Montaña lejana */}
           <img
-            src="/AliiaTech/home-header-4.png"
+            src="/home-header-4.png"
             alt=""
             className="absolute bottom-0 w-full h-auto"
           />
           {/* Montaña media */}
           <img
-            src="/AliiaTech/home-header-2.png"
+            src="/home-header-2.png"
             alt=""
             className="absolute bottom-0 w-full h-auto"
           />
           {/* Montaña cercana */}
           <img
-            src="/AliiaTech/home-header-3.png"
+            src="/home-header-3.png"
             alt=""
             className="absolute bottom-0 w-full h-auto"
           />
           {/* Persona (Capa más cercana) */}
           <img
-            src="/AliiaTech/home-header-5.png"
+            src="/home-header-5.png"
             alt="Silueta de persona mirando al cielo"
             className="absolute bottom-0 w-full h-auto"
           />
