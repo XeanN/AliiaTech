@@ -74,7 +74,7 @@ function Footer() {
           <div>
             <h3 className="text-lg font-semibold text-white uppercase tracking-wider">Contacto</h3>
             <ul className="mt-4 space-y-2 text-text-muted">
-              <li>info@aliiia.tech</li>
+              <li>info@aliiatech.com </li>
               <li>+51 969 980 152</li>
               <li>Lima, Perú</li>
               <li className="pt-4">
