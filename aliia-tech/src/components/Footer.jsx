@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logoImage from '/Aliia-tech.png'; // o '../assets/logo-aliia-tech.png'
 
 // Iconos (los definimos aquí para reusarlos)
 const LinkedInIcon = () => (
@@ -22,8 +23,14 @@ function Footer() {
           
           {/* Columna 1: Logo e Info */}
           <div>
-            <Link to="/" className="text-2xl font-bold text-white">
-              Aliia Tech
+            {/* --- 2. REEMPLAZA EL TEXTO POR LA IMAGEN --- */}
+            <Link to="/"> {/* Ya no necesita las clases de texto como text-2xl */}
+              <img 
+                src={logoImage} 
+                alt="Logo Aliia Tech"
+                className="h-9 w-auto" // <-- ¡Ajusta esta altura! (h-9 = 36px)
+                                        // Prueba h-8, h-9, o h-10 hasta que te guste
+              />
             </Link>
             <p className="mt-4 text-text-muted">
               Transformamos negocios con tecnología e innovación.
@@ -69,7 +76,7 @@ function Footer() {
           <div>
             <h3 className="text-lg font-semibold text-white uppercase tracking-wider">Contacto</h3>
             <ul className="mt-4 space-y-2 text-text-muted">
-              <li>contacto@aliiia.tech</li>
+              <li>info@aliiatech.com</li>
               <li>+51 969 980 152</li>
               <li>Lima, Perú</li>
               <li className="pt-4">
