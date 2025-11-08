@@ -25,11 +25,27 @@
 
     <!-- --- 5. SCRIPTS (Los que ya teníamos) --- -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-  </head>
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                'dark-bg': '#111827',
+                'dark-card': '#1f2937',
+                'primary': '#0047AB',
+                'accent-start': '#00C1D4',
+                'accent-end': '#10b981',
+                'text-light': '#E5E7EB',
+                'text-muted': '#9CA3AF',
+              }
+            }
+          }
+        }
+      </script>
+      
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+      
+    </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
