@@ -329,7 +329,7 @@ ${formData.message}
                 </a>
 
                 <a 
-                  href="mailto:contacto@aliiia.tech"
+                  href="mailto:info@aliiatech.com"
                   className="flex items-start hover:bg-gray-800/50 p-4 rounded-lg transition group"
                 >
                   <div className="flex-shrink-0 bg-dark-card text-accent-start p-3 rounded-full group-hover:scale-110 transition">
@@ -337,7 +337,7 @@ ${formData.message}
                   </div>
                   <div className="ml-4">
                     <h3 className="text-xl font-semibold text-white">Correo Electrónico</h3>
-                    <p className="text-text-muted group-hover:text-accent-start transition">contacto@aliiia.tech</p>
+                    <p className="text-text-muted group-hover:text-accent-start transition">info@aliiatech.com</p>
                   </div>
                 </a>
 
