@@ -1,20 +1,20 @@
-        /* Importamos la fuente */
+/* Importamos la fuente */
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
         /* ¡BORRAMOS TODO LO DE @tailwind Y @apply! */
 
-        /* Aplicamos el fondo oscuro y la fuente Poppins al body */
+        /* Aplicamos la fuente Poppins al body y quitamos el fondo */
         body {
         /* ¡Usamos los nombres de colores que definimos en index.html! */
-        background-color: #111827; /* (dark-bg) */
+        background-color: transparent; /* <-- CAMBIO AQUÍ: De #111827 a transparent */
         color: #E5E7EB;           /* (text-light) */
         font-family: 'Poppins', sans-serif;
         overflow-x: hidden; /* Previene scroll horizontal por las animaciones */
         }
 
-        /* ¡NUEVA CLASE! para las tarjetas "flotantes" oscuras */
+        /* ¡NUEVA CLASE! para las tarjetas "flotantes" (ahora transparente) */
         .content-card {
-        background-color: #1f2937; /* (dark-card) */
+        background-color: transparent; /* <-- CAMBIO AQUÍ: De #1f2937 a transparent */
         color: #E5E7EB;           /* (text-light) */
         padding-top: 5rem;
         padding-bottom: 5rem;
