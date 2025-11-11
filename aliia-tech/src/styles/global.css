@@ -50,7 +50,7 @@
     box-shadow: 0 0 15px 5px rgba(52, 248, 209, 0.4);
     transition: all 0.3s ease;
     }
-
+    
     .hero-cta-button:hover {
     transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
     /* Sombra (glow) más intensa */

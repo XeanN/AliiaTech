@@ -132,7 +132,7 @@ function Services() {
             icon={<PilarIconIndustria />}
             aosDelay="400" 
           />
-
+  
         </div>
       </section>
     </>

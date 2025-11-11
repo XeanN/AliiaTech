@@ -16,7 +16,7 @@
                 'text-light': '#E5E7EB',
                 'text-muted': '#9CA3AF',
             },
-
+            
             // 🎞️ Animaciones personalizadas
             keyframes: {
                 menuFadeIn: {

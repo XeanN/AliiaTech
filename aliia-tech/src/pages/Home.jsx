@@ -25,7 +25,7 @@ const PilarIconIndustria = () => (
     </svg>
 );
 
-
+    
 function Home() {
   return (
     <>

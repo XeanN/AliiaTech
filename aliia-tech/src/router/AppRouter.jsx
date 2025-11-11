@@ -51,7 +51,7 @@ function AppRouter() {
     <Router>
       <Wrapper>
         <div className="relative min-h-screen group">
-
+    
           {/* <-- FONDO GLOBAL FIJO --- */}
           <div className="fixed top-0 left-0 w-full h-screen"> {/* ¡CAMBIO! Quitamos z-0 de aquí */}
             

@@ -36,7 +36,7 @@ function About() {
               Nuestro objetivo es ayudar a las organizaciones a crecer, optimizar procesos y adaptarse a la era digital.
             </p>
           </div>
-
+    
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
             
             <div className="bg-dark-card p-8 rounded-xl shadow-lg border border-gray-700" data-aos="fade-up" data-aos-delay="100">

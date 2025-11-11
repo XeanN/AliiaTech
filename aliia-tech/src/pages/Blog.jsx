@@ -11,7 +11,7 @@ function Blog() {
         subtitle="Aprende sobre innovación, inteligencia artificial, marketing y transformación digital."
         imageUrl="/Hero-Blog.jpg"
       />
-
+  
       <section className="content-card" data-aos="fade-up">
         <div className="container mx-auto px-6">
           

@@ -77,7 +77,7 @@ button:focus-visible {
     opacity: 1;
   }
 }
-
+  
 .animate-menuFadeIn {
   animation: menuFadeIn 0.3s ease-out forwards;
 }

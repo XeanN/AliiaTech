@@ -50,7 +50,7 @@ function Navbar() {
               className="h-8 w-auto" // <-- ¡Ajusta esta altura! h-8 = 32px.
             />
           </Link>
-
+    
           {/* Menú de Escritorio (Enlaces de texto) */}
           <div className="hidden md:flex items-center space-x-2">
             <NavLink to="/" className={linkClass}>Inicio</NavLink>

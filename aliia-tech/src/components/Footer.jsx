@@ -43,7 +43,7 @@ function Footer() {
               {/* Añade más redes si quieres */}
             </div>
           </div>
-
+    
           {/* Columna 2: ¡PILARES 1 y 4 ACTUALIZADOS! */}
           <div>
             <h3 className="text-lg font-semibold text-white uppercase tracking-wider">Web e Industrias</h3>

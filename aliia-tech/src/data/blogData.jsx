@@ -115,7 +115,7 @@
             </p>
         </div>
         )
-    },
+    },  
     // Artículo 3
     "transformacion-digital-futuro": {
         slug: "transformacion-digital-futuro",

@@ -15,5 +15,5 @@
         </div>
     );
     }
-
+    
     export default ServiceCard;

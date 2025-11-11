@@ -79,7 +79,7 @@
         },
         detectRetina: true,
     };
-
+    
     return (
         <Particles
         id="tsparticles"

@@ -336,7 +336,7 @@
         features: ["Sitio Web Inmobiliario con Renders 3D", "Software de Gestión de Proyectos (Costos, Logística)", "Servicios de Diseño de Interiores B2B", "Planificación de Espacios y Optimización", "Integración de ERP con Diseño (BIM)"],
         tech: ["Software ERP", "AutoCAD", "SketchUp", "BIM", "React"],
         cta: "Gestiona tu Proyecto de Inicio a Fin"
-    },
+    },  
     "soluciones-educacion": {
         id: 16,
         slug: "soluciones-educacion", // <-- ¡LA CORRECCIÓN ESTÁ AQUÍ!

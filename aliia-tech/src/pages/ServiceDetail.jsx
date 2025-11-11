@@ -39,7 +39,7 @@ function ServiceDetail() {
           	</h1>
           	</div>
         </section>
-
+    
       	{/* --- Contenido del Blueprint (8 Pasos) --- */}
       	{/* ¡CAMBIO 2: AÑADIDO MARGEN NEGATIVO Y Z-INDEX! */}
       	<section className="content-card relative z-10 -mt-8 md:-mt-12">

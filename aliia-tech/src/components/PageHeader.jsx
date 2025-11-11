@@ -16,7 +16,7 @@ return (
         className="absolute inset-0 bg-cover bg-center" 
         style={{ backgroundImage: `url('${imageUrl || defaultImage}')` }}
     ></div>
-    
+        
     {/* 2. Capa de Oscurecimiento */}
     <div className="absolute inset-0 bg-black opacity-50"></div>
 
