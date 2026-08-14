@@ -105,7 +105,7 @@ export default async function ServiceEditPage({ params }: { params: Promise<{ sl
           <label className={labelClass}>Testimonio — cita *</label>
           <textarea name="quote" required rows={2} defaultValue={socialProof.quote} className={inputClass} />
         </div>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label className={labelClass}>Testimonio — autor *</label>
             <input name="author" required defaultValue={socialProof.author} className={inputClass} />
