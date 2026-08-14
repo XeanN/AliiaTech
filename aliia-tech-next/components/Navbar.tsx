@@ -6,8 +6,8 @@ import Image from "next/image";
 import ActiveLink from "./ActiveLink";
 import FullScreenMenu from "./FullScreenMenu";
 
-const baseLink = "py-2 px-3 rounded-lg transition-colors duration-300 text-white hover:bg-white hover:bg-opacity-20";
-const activeLink = "py-2 px-3 rounded-lg transition-colors duration-300 text-white font-bold bg-white bg-opacity-20";
+const baseLink = "py-2 px-3 rounded-lg transition-colors duration-300 text-white hover:bg-white/20";
+const activeLink = "py-2 px-3 rounded-lg transition-colors duration-300 text-white font-bold bg-white/20";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);

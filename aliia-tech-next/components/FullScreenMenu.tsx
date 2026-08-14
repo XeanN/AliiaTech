@@ -161,7 +161,7 @@ export default function FullScreenMenu({ onClose }: { onClose: () => void }) {
   }, []);
 
   return (
-    <div className="fixed inset-0 z-[100] p-8 bg-dark-bg bg-opacity-95 backdrop-blur-sm text-white animate-menu-fade-in overflow-y-auto">
+    <div className="fixed inset-0 z-[100] p-8 bg-dark-bg/95 backdrop-blur-sm text-white animate-menu-fade-in overflow-y-auto">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         <Link href="/" onClick={onClose} className="block">
           <Image src="/Aliia-tech.png" alt="Logo Aliia Tech" width={160} height={36} className="h-9 w-auto" />
