@@ -15,6 +15,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
             <Link href="/admin" className="hover:text-accent-start transition">Leads</Link>
             <Link href="/admin/servicios" className="hover:text-accent-start transition">Servicios</Link>
             <Link href="/admin/blog" className="hover:text-accent-start transition">Blog</Link>
+            <Link href="/admin/cambiar-password" className="hover:text-accent-start transition">Cambiar contraseña</Link>
           </nav>
           <form action={logout}>
             <button type="submit" className="text-sm text-text-muted hover:text-white transition">
