@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 export default function AdminRootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es">
-      <body className={`${poppins.variable} font-sans bg-dark-bg text-text-light`}>{children}</body>
+      <body className={`${poppins.className} bg-dark-bg text-text-light`}>{children}</body>
     </html>
   );
 }

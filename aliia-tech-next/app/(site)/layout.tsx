@@ -52,7 +52,7 @@ const organizationJsonLd = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es">
-      <body className={`${poppins.variable} font-sans bg-dark-bg text-text-light`}>
+      <body className={`${poppins.className} bg-dark-bg text-text-light`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
