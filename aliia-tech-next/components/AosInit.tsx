@@ -1,0 +1,21 @@
+"use client";
+
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+export default function AosInit() {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    AOS.init({ duration: 700, once: true, offset: 100 });
+  }, []);
+
+  useEffect(() => {
+    const timer = setTimeout(() => AOS.refresh(), 100);
+    return () => clearTimeout(timer);
+  }, [pathname]);
+
+  return null;
+}
