@@ -60,28 +60,28 @@ export default function Home() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <Link href="/servicios#pilar-web" className="block bg-dark-card/50 backdrop-blur-md p-8 rounded-xl shadow-xl border border-gray-700 hover:border-accent-start transition-colors" data-aos="fade-up" data-aos-delay="100">
+              <Link href="/servicios#pilar-web" className="block bg-dark-card/50 backdrop-blur-md p-8 rounded-xl shadow-xl border border-gray-700 hover:border-accent-start hover:shadow-2xl hover:shadow-accent-start/20 hover:-translate-y-1 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
                 <div className="bg-gray-900 p-3 rounded-full w-16 h-16 flex items-center justify-center mb-4">
                   <PilarIconWeb />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-3">Web y E-commerce</h3>
                 <p className="text-text-muted">Tiendas online, apps móviles y sitios web corporativos.</p>
               </Link>
-              <Link href="/servicios#pilar-sistemas" className="block bg-dark-card/50 backdrop-blur-md p-8 rounded-xl shadow-xl border border-gray-700 hover:border-accent-start transition-colors" data-aos="fade-up" data-aos-delay="200">
+              <Link href="/servicios#pilar-sistemas" className="block bg-dark-card/50 backdrop-blur-md p-8 rounded-xl shadow-xl border border-gray-700 hover:border-accent-start hover:shadow-2xl hover:shadow-accent-start/20 hover:-translate-y-1 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
                 <div className="bg-gray-900 p-3 rounded-full w-16 h-16 flex items-center justify-center mb-4">
                   <PilarIconSistemas />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-3">Sistemas y Automatización</h3>
                 <p className="text-text-muted">Software ERP, Logística (SUNAT), IA y Servicios Cloud.</p>
               </Link>
-              <Link href="/servicios#pilar-marketing" className="block bg-dark-card/50 backdrop-blur-md p-8 rounded-xl shadow-xl border border-gray-700 hover:border-accent-start transition-colors" data-aos="fade-up" data-aos-delay="300">
+              <Link href="/servicios#pilar-marketing" className="block bg-dark-card/50 backdrop-blur-md p-8 rounded-xl shadow-xl border border-gray-700 hover:border-accent-start hover:shadow-2xl hover:shadow-accent-start/20 hover:-translate-y-1 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
                 <div className="bg-gray-900 p-3 rounded-full w-16 h-16 flex items-center justify-center mb-4">
                   <PilarIconMarketing />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-3">Marketing y Estrategia</h3>
                 <p className="text-text-muted">Power BI, Marketing Conversacional y Auditorías de Seguridad.</p>
               </Link>
-              <Link href="/servicios#pilar-industrias" className="block bg-dark-card/50 backdrop-blur-md p-8 rounded-xl shadow-xl border border-gray-700 hover:border-accent-start transition-colors" data-aos="fade-up" data-aos-delay="400">
+              <Link href="/servicios#pilar-industrias" className="block bg-dark-card/50 backdrop-blur-md p-8 rounded-xl shadow-xl border border-gray-700 hover:border-accent-start hover:shadow-2xl hover:shadow-accent-start/20 hover:-translate-y-1 transition-all duration-300" data-aos="fade-up" data-aos-delay="400">
                 <div className="bg-gray-900 p-3 rounded-full w-16 h-16 flex items-center justify-center mb-4">
                   <PilarIconIndustria />
                 </div>

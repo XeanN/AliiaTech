@@ -59,16 +59,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         <AosInit />
         <div className="relative min-h-screen">
-          <div
-            className="fixed inset-0 -z-10"
-            style={{
-              backgroundImage:
-                "linear-gradient(to top, #011f2d, #0c4b5c 57%, #17a3b3 94%), url('/fondito.jpg')",
-              backgroundBlendMode: "soft-light",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          />
+          <div className="fixed inset-0 -z-20 overflow-hidden">
+            <img
+              src="/fondito.jpg"
+              alt=""
+              aria-hidden="true"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover opacity-90"
+            >
+              <source src="/videito.mp4" type="video/mp4" />
+            </video>
+          </div>
           <div className="fixed inset-0 -z-10 bg-black opacity-70" />
 
           <Navbar />
